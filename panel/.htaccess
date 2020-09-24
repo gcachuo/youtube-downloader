@@ -1,0 +1,14 @@
+RewriteEngine on
+
+php_flag  log_errors on
+php_value error_log error.log
+
+AddHandler application/x-httpd-php73 .php
+
+# Don't rewrite files or directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Rewrite everything else to index.html to allow html5 state links
+RewriteRule ^(.*)$ index.php?module=$1 [QSA,L]

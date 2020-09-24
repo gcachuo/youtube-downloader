@@ -1,0 +1,23 @@
+{
+  "code": "youtube-dl",
+  "project": "youtube-dl",
+  "theme": "themes/default/",
+  "entry": "index.html",
+  "default": "dashboard",
+  "basename": "/web/",
+  "breadcrumbs": false,
+  "error": {
+    "file": "error.html",
+    "button": "",
+    "messages": {
+      "404": ""
+    }
+  },
+  "modules": {
+    "dashboard": {
+      "name": "Dashboard",
+      "icon": "dashboard",
+      "href": "dashboard"
+    }
+  }
+}
