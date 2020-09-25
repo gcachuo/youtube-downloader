@@ -2,7 +2,7 @@
     <h4>Descarga de videos de Youtube</h4>
     <form uri="video/descarga" method="post" callback="downloadVideo">
         <div class="form-group">
-            <input type="text" placeholder="Link del video" class="form-control">
+            <input type="text" placeholder="Link del video" class="form-control" name="video-url" required>
         </div>
         <button type="submit" class="btn btn-primary">Descargar</button>
     </form>

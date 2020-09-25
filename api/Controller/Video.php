@@ -5,6 +5,7 @@ namespace Controller;
 
 
 use Controller;
+use System;
 
 class Video extends Controller
 {
@@ -19,7 +20,9 @@ class Video extends Controller
 
     protected function downloadVideo()
     {
-        $url = 'https://www.youtube.com/watch?v=ndiD8V7zpAs';
+        System::check_value_empty($_POST, ['video-url'], 'Missing Data.');
+        $url = $_POST['video-url'];
+
         $path = 'public/videos/video.webm';
         $format = '(bestvideo[vcodec=vp9]/bestvideo)+(bestaudio[acodec=opus]/bestaudio)/best';
         unlink(__DIR__ . '/../' . $path);
