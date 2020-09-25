@@ -3,7 +3,7 @@ import {Defaults} from "../../defaults";
 
 export class Dashboard {
     downloadVideo({data}: ApiResponse<{ output: string }>) {
-        window.open(Defaults.global.apiUrl + 'public/videos/video.webm', '_blank');
+        window.open(Defaults.global.apiUrl + 'public/videos/video.webm', 'video');
         console.log(data.output);
         return data.output;
     }
