@@ -4,7 +4,7 @@
         <div class="form-group">
             <input type="text" placeholder="Link del video" class="form-control">
         </div>
-        <button class="btn btn-primary">Descargar</button>
+        <button type="submit" class="btn btn-primary">Descargar</button>
     </form>
 </div>
 <script>

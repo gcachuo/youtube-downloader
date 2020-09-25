@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
     "toastr": "^2.1.4"
@@ -12,6 +13,7 @@
     "@types/toastr": "^2.1.38",
     "css-loader": "^4.3.0",
     "expose-loader": "^1.0.0",
+    "file-loader": "^6.1.0",
     "sass": "^1.26.11",
     "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",

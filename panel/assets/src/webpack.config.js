@@ -26,6 +26,10 @@ module.exports = {
                     'sass-loader',
                 ],
             },
+            {
+                test: /\.(svg|eot|woff|woff2|ttf)$/,
+                use: ['file-loader']
+            },
         ],
     },
     performance: {
