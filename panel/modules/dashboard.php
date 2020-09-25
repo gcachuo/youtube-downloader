@@ -6,10 +6,13 @@
         </div>
         <button type="submit" class="btn btn-primary">Descargar</button>
     </form>
+    <hr>
+    <textarea id="txtOutput" class="form-control" placeholder="Output" style="height: calc(100vh - 200px)"></textarea>
 </div>
 <script>
     function downloadVideo(response) {
         const dashboard = new App.Dashboard();
-        dashboard.downloadVideo(response);
+        const output = dashboard.downloadVideo(response);
+        $("#txtOutput").text(output);
     }
 </script>

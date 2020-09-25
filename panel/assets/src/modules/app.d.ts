@@ -2,6 +2,6 @@
 declare namespace App {
     //export class <module>
     export class Dashboard {
-        downloadVideo()
+        downloadVideo(response: ApiResponse<{ output: string }>): string
     }
 }
