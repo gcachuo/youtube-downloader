@@ -27,8 +27,9 @@ class Video extends Controller
         $format = '(bestvideo[vcodec=vp9]/bestvideo)+(bestaudio[acodec=opus]/bestaudio)/best';
 
         unlink(__DIR__ . '/../' . $path);
-        $output = shell_exec("youtube-dl --format '$format' '$url' -o'$path' --no-warnings 2>&1");
+        $cmd = "youtube-dl --format '$format' '$url' -o'$path' --no-warnings";
+        $output = shell_exec("$cmd 2>&1");
 
-        return compact('output');
+        return compact('output', 'cmd');
     }
 }
